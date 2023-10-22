@@ -1,0 +1,48 @@
+Specification:
+
+Program Name: TextFileConverter
+
+Program Description: 
+The TextFileConverter program is designed to read a text file, sanitize the input, and convert it into a custom format. The custom format is defined as each line of the text file being preceded by '  - ' and wrapped in quotes. The program will output the converted text to a new file.
+
+Dependencies:
+Python's built-in modules: os, json, and codecs
+
+Core Classes and Functions:
+
+1. Class: FileHandler
+   - Purpose: To handle file reading and writing operations.
+
+   - Method: read_file
+     - Input: file_path (str)
+     - Output: contents (str)
+     - Purpose: To read the contents of a given text file. It will throw an exception if the file does not exist or is not accessible.
+
+   - Method: write_file
+     - Input: file_path (str), content (str)
+     - Output: None
+     - Purpose: To write the given content to a specified file. If the file does not exist, it will be created.
+
+2. Function: sanitize_input
+   - Input: text (str)
+   - Output: sanitized_text (str)
+   - Purpose: To sanitize the input text. This function will remove any harmful or unwanted characters from the text.
+
+3. Function: convert_to_custom_format
+   - Input: text (str)
+   - Output: custom_text (str)
+   - Purpose: To convert the sanitized text into the custom format. This function will iterate over each line of the text, prepend '  - ' and wrap the line in quotes.
+
+Program Flow:
+
+1. The program will first read the provided text file using the read_file method of the FileHandler class.
+2. The read text is then sanitized using the sanitize_input function.
+3. The sanitized text is then converted into the custom format using the convert_to_custom_format function.
+4. The converted text is written to a new file using the write_file method of the FileHandler class.
+
+Error Handling:
+
+1. The program should handle any file-related errors, such as the file not existing or not being accessible.
+2. The program should also handle any errors that may occur during the sanitization or conversion process. 
+
+This specification provides a detailed overview of the TextFileConverter program, including its core classes and functions, dependencies, program flow, and error handling.
